@@ -13,7 +13,6 @@ public class task2 {
         String user;
         Random random = new Random();
         int guess = random.nextInt(25);
-        System.out.println(words[guess]);
         do {
             System.out.println("Попробуйте угадать слово");
             user = scanner.nextLine();
