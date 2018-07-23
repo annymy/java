@@ -11,17 +11,24 @@ public class task2 {
         System.out.println(Arrays.toString(words));
         Scanner scanner = new Scanner(System.in);
         String user;
+        int a;
         Random random = new Random();
         int guess = random.nextInt(25);
         do {
             System.out.println("Попробуйте угадать слово");
             user = scanner.nextLine();
+
             if(user.equals(words[guess])) {
                 System.out.print("Вы угадали!");
                 break;
             }
             else {
-                for (int i = 0; i < words[guess].length(); i++) {
+                if(words[guess].length()>user.length()){
+                    a = user.length();
+                }  else {
+                    a = words[guess].length();
+                }
+                for (int i = 0; i < a; i++) {
                     if (user.charAt(i) == words[guess].charAt(i)) {
                         System.out.print(user.charAt(i));
                     } else {
