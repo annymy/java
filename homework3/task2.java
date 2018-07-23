@@ -23,9 +23,10 @@ public class task2 {
                 break;
             }
             else {
-                if(user.equals(words[guess])) {
-                    System.out.print("Вы угадали!");
-                    break;
+                if(words[guess].length()>user.length()){
+                    a = user.length();
+                }  else {
+                    a = words[guess].length();
                 }
                 for (int i = 0; i < a; i++) {
                     if (user.charAt(i) == words[guess].charAt(i)) {
